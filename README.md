@@ -5,10 +5,10 @@
 # @ton.js/json-parser
 
 A customizable JSON parser that is 100% compatible
-with native implementation (`JSON.parse()`) adds
-TC39 [source access proposal][tc39-proposal] have
-better security like [secure-json-parse][secure-json-parse]
-and… 25 times slower…
+with native implementation (`JSON.parse()`), adds
+TC39 [source access proposal][tc39-proposal] and additional features,
+have better security like [secure-json-parse][secure-json-parse]
+and is… 25 times slower…
 
 ## Rationale
 
@@ -64,7 +64,8 @@ for other cases as well.
     and native `JSON.parse()` implementation,
 
 *   future-compatible by implementing the Stage-3
-    TC39 [source access proposal][tc39-proposal],
+    TC39 [source access proposal][tc39-proposal] and additional
+    features,
 
 *   adds special handling for `__proto__` and `constructor.prototype`
     object properties to implement better security,
