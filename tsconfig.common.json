@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "ES2020"
+    ],
+    "sourceMap": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false
+  },
+  "files": []
+}

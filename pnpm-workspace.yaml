@@ -1,0 +1,6 @@
+
+packages:
+  - 'benchmark'
+  - 'examples/*'
+  - 'package'
+  - 'readme'

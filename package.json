@@ -1,0 +1,9 @@
+{
+  "name": "root",
+  "scripts": {
+  },
+  "private": true,
+  "devDependencies": {
+    "@tsconfig/node-lts-strictest-esm": "^18.12.1"
+  }
+}

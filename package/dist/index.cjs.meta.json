@@ -1,0 +1,42 @@
+{
+    "inputs": {
+        "src/json-parser.ts": {
+            "bytes": 10398,
+            "imports": [],
+            "format": "esm"
+        },
+        "src/index.ts": {
+            "bytes": 143,
+            "imports": [
+                {
+                    "path": "src/json-parser.ts",
+                    "kind": "import-statement",
+                    "original": "./json-parser.js"
+                }
+            ],
+            "format": "esm"
+        }
+    },
+    "outputs": {
+        "dist/index.cjs.map": {
+            "imports": [],
+            "exports": [],
+            "inputs": {},
+            "bytes": 17514
+        },
+        "dist/index.cjs": {
+            "imports": [],
+            "exports": [],
+            "entryPoint": "src/index.ts",
+            "inputs": {
+                "src/index.ts": {
+                    "bytesInOutput": 123
+                },
+                "src/json-parser.ts": {
+                    "bytesInOutput": 7924
+                }
+            },
+            "bytes": 9024
+        }
+    }
+}

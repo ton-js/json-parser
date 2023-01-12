@@ -1,0 +1,19 @@
+{
+  "name": "benchmark",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "if ! [ -d ./results ]; then run-s benchmark; fi",
+    "benchmark": "ts-node ./benchmark.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "benny": "^3.7.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@ton.js/json-parser": "workspace:*"
+  }
+}

@@ -1,0 +1,1 @@
+{"obj1":{"arr1":[{"obj2":[true,false,null,0,123,-123.456e3,123.456e-3,"\\rhello world\\n","[\\\u0057, \\\u042F, \\\u2605, \\\uffFd]",{"kwTrue":true,"kwFalse":false,"kwNull":null,"zero":0,"num1":123,"num2":-123.456e3,"num3":123.456e-3,"arr2":[1,2,true,false],"str1":"\\rhello world\\n","str2":"[\\\u0057, \\\u042F, \\\u2605, \\\uffFd]"}]}]}}
