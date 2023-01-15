@@ -5,17 +5,21 @@ set -o pipefail
 
 SCRIPT_PATH="$(dirname "$0")"
 ROOT_PATH="${SCRIPT_PATH}/.."
-PACKAGE_PATH="${ROOT_PATH}/package"
-MANIFEST_PATH="${PACKAGE_PATH}/package.json"
+
+PKG1_PATH="${ROOT_PATH}/packages/json-parser"
+MAN1_PATH="${PKG1_PATH}/package.json"
+
+PKG2_PATH="${ROOT_PATH}/packages/json-parse-polyfill"
+MAN2_PATH="${PKG2_PATH}/package.json"
+
+# Reading some data from the main package manifest
+NAME1=$(jq -r '.name' "${MAN1_PATH}")
+NAME2=$(jq -r '.name' "${MAN2_PATH}")
+TAG=$(jq -r '.publishConfig.tag' "${MAN1_PATH}")
+VERSION=$(jq -r '.version' "${MAN1_PATH}")
 
 
-# Reading some data from the package manifest
-NAME=$(jq -r '.name' "${MANIFEST_PATH}")
-TAG=$(jq -r '.publishConfig.tag' "${MANIFEST_PATH}")
-VERSION=$(jq -r '.version' "${MANIFEST_PATH}")
-
-
-echo "Starting to release the package: ${NAME}"
+echo "Starting to release the packages…"
 
 echo "Building all the projects in the monorepo first…"
 pnpm run -r build
@@ -24,12 +28,17 @@ pnpm run -r build
 read -e -p "Tag: " -i "${TAG}" TAG
 read -e -p "Version: " -i "${VERSION}" VERSION
 
-echo "Updating package manifest…"
-jq ".version = \"${VERSION}\"" "${MANIFEST_PATH}" > "${PACKAGE_PATH}/~package.json"
-mv "${PACKAGE_PATH}/~package.json" "${MANIFEST_PATH}"
+echo "Updating packages manifests…"
 
-echo "Copying README file…"
-cp "${ROOT_PATH}/README.md" "${PACKAGE_PATH}/"
+jq ".version = \"${VERSION}\"" "${MAN1_PATH}" > "${PKG1_PATH}/~package.json"
+mv "${PKG1_PATH}/~package.json" "${MAN1_PATH}"
+
+jq ".version = \"${VERSION}\"" "${MAN2_PATH}" > "${PKG2_PATH}/~package.json"
+mv "${PKG2_PATH}/~package.json" "${MAN2_PATH}"
+
+echo "Copying the README files…"
+cp "${ROOT_PATH}/README.md" "${PKG1_PATH}/"
+cp "${ROOT_PATH}/README.md" "${PKG2_PATH}/"
 
 # Making sure Git is "clean"
 if [ -n "$(git status --porcelain)" ]; then
@@ -37,11 +46,19 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1 || return 1
 fi
 
-echo "Publishing the package…"
-(cd "${PACKAGE_PATH}" && npm publish --tag "${TAG}")
+echo "Publishing the package: ${NAME1}…"
+(cd "${PKG1_PATH}" && npm publish --dry-run --tag "${TAG}")
+
+echo "Publishing the package: ${NAME2}…"
+(cd "${PKG2_PATH}" && npm publish --dry-run --tag "${TAG}")
 
 printf "\nRelease complete…\n\n"
 
-echo "Install it with:"
-echo "— ${NAME}@${VERSION}"
-echo "— ${NAME}@${TAG}"
+echo "Install the packages with:"
+echo "[${NAME1}]"
+echo "— ${NAME1}@${VERSION}"
+echo "— ${NAME1}@${TAG}"
+echo ""
+echo "[${NAME2}]"
+echo "— ${NAME2}@${VERSION}"
+echo "— ${NAME2}@${TAG}"

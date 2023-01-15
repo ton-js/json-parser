@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.common.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "resolveJsonModule": true,
+  },
+  "files": [
+    "esbuild.ts"
+  ],
+  "ts-node": {
+    "esm": true
+  }
+}

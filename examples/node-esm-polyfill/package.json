@@ -10,7 +10,6 @@
     "__examples__": ":",
     "keypath": "ts-node src/keypath.ts",
     "native-reviver": "ts-node src/native-reviver.ts",
-    "proto-throw": "ts-node src/proto-throw.ts",
     "simple": "ts-node src/simple.ts",
     "source-text-access": "ts-node src/source-text-access.ts"
   },
@@ -18,7 +17,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@ton.js/json-parser": "workspace:*"
+    "@ton.js/json-parse-polyfill": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^14.18.36",

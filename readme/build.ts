@@ -12,7 +12,7 @@ import { remark } from 'remark';
 import remarkToc from 'remark-toc';
 import remarkValidateLinks from 'remark-validate-links';
 
-import manifest from '../package/package.json' assert { type: 'json' };
+import manifest from '../packages/json-parser/package.json' assert { type: 'json' };
 
 
 const __dirname = dirname(

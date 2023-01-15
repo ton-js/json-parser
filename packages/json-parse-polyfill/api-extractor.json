@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
+  "projectFolder": ".",
+  "mainEntryPointFilePath": "<projectFolder>/temp/types/index.d.ts",
+  "bundledPackages": [
+    "@ton.js/json-parser"
+  ],
+  "newlineKind": "lf",
+  "enumMemberOrder": "preserve",
+  "compiler": {
+    "tsconfigFilePath": "<projectFolder>/tsconfig.types.json"
+  },
+  "apiReport": {
+    "enabled": true,
+    "reportFileName": "<unscopedPackageName>.api.md",
+    "reportFolder": "<projectFolder>",
+    "reportTempFolder": "<projectFolder>/temp/"
+  },
+  "docModel": {
+    "enabled": true,
+    "apiJsonFilePath": "<projectFolder>/temp/<unscopedPackageName>.api.json",
+    "projectFolderUrl": "https://github.com/ton-js/json-parser"
+  },
+  "dtsRollup": {
+    "enabled": true,
+    "publicTrimmedFilePath": "<projectFolder>/dist/index.d.ts",
+    "alphaTrimmedFilePath": "<projectFolder>/dist/index-alpha.d.ts",
+    "betaTrimmedFilePath": "<projectFolder>/dist/index-beta.d.ts",
+    "untrimmedFilePath": ""
+  },
+  "tsdocMetadata": {},
+  "messages": {
+    "compilerMessageReporting": {
+      "default": {
+        "logLevel": "warning"
+      }
+    },
+    "extractorMessageReporting": {
+      "default": {
+        "logLevel": "warning"
+      }
+    },
+    "tsdocMessageReporting": {
+      "default": {
+        "logLevel": "warning"
+      }
+    }
+  }
+}

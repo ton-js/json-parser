@@ -2,5 +2,5 @@
 packages:
   - 'benchmark'
   - 'examples/*'
-  - 'package'
+  - 'packages/*'
   - 'readme'

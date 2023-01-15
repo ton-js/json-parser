@@ -1,0 +1,47 @@
+{
+    "inputs": {
+        "../json-parser/dist/index.mjs": {
+            "bytes": 8005,
+            "imports": [],
+            "format": "esm"
+        },
+        "src/index.ts": {
+            "bytes": 670,
+            "imports": [
+                {
+                    "path": "../json-parser/dist/index.mjs",
+                    "kind": "import-statement",
+                    "original": "@ton.js/json-parser"
+                },
+                {
+                    "path": "../json-parser/dist/index.mjs",
+                    "kind": "import-statement",
+                    "original": "@ton.js/json-parser"
+                }
+            ],
+            "format": "esm"
+        }
+    },
+    "outputs": {
+        "dist/index.cjs.map": {
+            "imports": [],
+            "exports": [],
+            "inputs": {},
+            "bytes": 17610
+        },
+        "dist/index.cjs": {
+            "imports": [],
+            "exports": [],
+            "entryPoint": "src/index.ts",
+            "inputs": {
+                "src/index.ts": {
+                    "bytesInOutput": 425
+                },
+                "../json-parser/dist/index.mjs": {
+                    "bytesInOutput": 7924
+                }
+            },
+            "bytes": 9373
+        }
+    }
+}
