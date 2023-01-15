@@ -47,14 +47,14 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 echo "Publishing the package: ${NAME1}…"
-(cd "${PKG1_PATH}" && npm publish --dry-run --tag "${TAG}")
+(cd "${PKG1_PATH}" && npm publish --tag "${TAG}")
 
 echo "Publishing the package: ${NAME2}…"
-(cd "${PKG2_PATH}" && npm publish --dry-run --tag "${TAG}")
+(cd "${PKG2_PATH}" && npm publish --tag "${TAG}")
 
 printf "\nRelease complete…\n\n"
 
-echo "Install the packages with:"
+printf "Install the packages with:\n"
 echo "[${NAME1}]"
 echo "— ${NAME1}@${VERSION}"
 echo "— ${NAME1}@${TAG}"
