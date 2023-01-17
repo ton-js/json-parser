@@ -8,6 +8,7 @@
     "build:compile": "tsc",
     "clean": "rimraf ./dist/",
     "__examples__": ":",
+    "index": "ts-node src/index.ts",
     "keypath": "ts-node src/keypath.ts",
     "native-reviver": "ts-node src/native-reviver.ts",
     "simple": "ts-node src/simple.ts",
