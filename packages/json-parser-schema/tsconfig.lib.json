@@ -1,7 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.common.json",
-  "files": [
-    "src/index.ts"
+  "include": [
+    "package/src/"
+  ],
+  "exclude": [
+    "**/*.test.ts"
   ]
 }

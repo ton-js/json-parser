@@ -8,7 +8,7 @@
 export type Maybe<Type> = (Type | undefined);
 
 // @public (undocumented)
-export const nativeJsonParse: (text: string, reviver?: ((this: any, key: string, value: any) => any) | undefined) => any;
+export let nativeJsonParse: typeof JSON.parse;
 
 // @public (undocumented)
 export interface Options {

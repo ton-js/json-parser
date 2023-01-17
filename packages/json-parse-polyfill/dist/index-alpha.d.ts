@@ -9,7 +9,7 @@ export declare type Maybe<Type> = (Type | undefined);
 /**
  * @public
  */
-export declare const nativeJsonParse: (text: string, reviver?: ((this: any, key: string, value: any) => any) | undefined) => any;
+export declare let nativeJsonParse: typeof JSON.parse;
 
 /**
  * @public
