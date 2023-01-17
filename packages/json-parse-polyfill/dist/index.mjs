@@ -337,8 +337,9 @@ function nextContext(context, nextIndex, nextKey) {
 }
 
 // src/index.ts
-var nativeJsonParse = JSON.parse;
+var nativeJsonParse;
 if (JSON.parse !== jsonParsePolyfill) {
+  nativeJsonParse = JSON.parse;
   JSON.parse = jsonParsePolyfill;
 }
 function jsonParsePolyfill(source, reviver) {

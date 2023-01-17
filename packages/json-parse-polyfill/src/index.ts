@@ -1,6 +1,8 @@
 
 import type { ReviverFunc } from '@ton.js/json-parser';
+
 import { parseJson } from '@ton.js/json-parser';
+
 
 export * from '@ton.js/json-parser';
 
@@ -8,12 +10,15 @@ export * from '@ton.js/json-parser';
 /**
  * @public
  */
-export const nativeJsonParse = JSON.parse;
+let nativeJsonParse: typeof JSON.parse;
 
 // Installing the polyfill only once
 if (JSON.parse !== jsonParsePolyfill) {
+  nativeJsonParse = JSON.parse;
   JSON.parse = jsonParsePolyfill;
 }
+
+export { nativeJsonParse };
 
 
 function jsonParsePolyfill(
