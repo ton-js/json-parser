@@ -7,7 +7,7 @@ import * as benny from 'benny';
 
 import { parseJson } from '@ton.js/json-parser';
 
-import manifest from '../package/package.json' assert { type: 'json' };
+import manifest from '../packages/json-parser/package.json' assert { type: 'json' };
 
 
 const __dirname = dirname(
