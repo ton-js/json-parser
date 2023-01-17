@@ -6,7 +6,7 @@
             "format": "esm"
         },
         "src/index.ts": {
-            "bytes": 730,
+            "bytes": 670,
             "imports": [
                 {
                     "path": "../json-parser/dist/index.mjs",
@@ -27,7 +27,7 @@
             "imports": [],
             "exports": [],
             "inputs": {},
-            "bytes": 17629
+            "bytes": 17559
         },
         "dist/index.mjs": {
             "imports": [],
@@ -41,10 +41,10 @@
                     "bytesInOutput": 7924
                 },
                 "src/index.ts": {
-                    "bytesInOutput": 279
+                    "bytesInOutput": 260
                 }
             },
-            "bytes": 8331
+            "bytes": 8312
         }
     }
 }

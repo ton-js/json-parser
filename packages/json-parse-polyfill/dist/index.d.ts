@@ -9,7 +9,7 @@ export declare type Maybe<Type> = (Type | undefined);
 /**
  * @public
  */
-export declare let nativeJsonParse: typeof JSON.parse;
+export declare const nativeJsonParse: (text: string, reviver?: ((this: any, key: string, value: any) => any) | undefined) => any;
 
 /**
  * @public
@@ -39,9 +39,3 @@ export declare interface ReviverContext {
 export declare type ReviverFunc = (key: string, value: any, context: ReviverContext) => any;
 
 export { }
-
-declare global {
-  interface JSON {
-    parse<Type = any>(text: string, reviver?: ReviverFunc): Type;
-  }
-}

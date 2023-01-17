@@ -6,7 +6,7 @@
             "format": "esm"
         },
         "src/index.ts": {
-            "bytes": 730,
+            "bytes": 670,
             "imports": [
                 {
                     "path": "../json-parser/dist/index.mjs",
@@ -27,7 +27,7 @@
             "imports": [],
             "exports": [],
             "inputs": {},
-            "bytes": 17680
+            "bytes": 17610
         },
         "dist/index.cjs": {
             "imports": [],
@@ -35,13 +35,13 @@
             "entryPoint": "src/index.ts",
             "inputs": {
                 "src/index.ts": {
-                    "bytesInOutput": 444
+                    "bytesInOutput": 425
                 },
                 "../json-parser/dist/index.mjs": {
                     "bytesInOutput": 7924
                 }
             },
-            "bytes": 9392
+            "bytes": 9373
         }
     }
 }
