@@ -59,10 +59,50 @@ importers:
       ts-node: 10.9.1_ocil65wecyuhsmrrocoajouipe
       typescript: 4.9.4
 
+  examples/node-esm-rules:
+    specifiers:
+      '@ton.js/json-parse-polyfill': workspace:*
+      '@ton.js/json-parser': workspace:*
+      '@ton.js/json-parser-rules': workspace:*
+      '@types/node': ^14.18.36
+      npm-run-all: ^4.1.5
+      rimraf: ^3.0.2
+      ts-node: ^10.9.1
+      typescript: ^4.9.4
+    dependencies:
+      '@ton.js/json-parse-polyfill': link:../../packages/json-parse-polyfill
+      '@ton.js/json-parser': link:../../packages/json-parser
+      '@ton.js/json-parser-rules': link:../../packages/json-parser-rules
+    devDependencies:
+      '@types/node': 14.18.36
+      npm-run-all: 4.1.5
+      rimraf: 3.0.2
+      ts-node: 10.9.1_ocil65wecyuhsmrrocoajouipe
+      typescript: 4.9.4
+
   packages/json-parse-polyfill:
     specifiers:
-      '@microsoft/api-extractor': ^7.33.7
+      '@microsoft/api-extractor': ^7.33.8
       '@ton.js/json-parser': workspace:*
+      '@types/node': ^14.18.36
+      esbuild: ^0.16.17
+      npm-run-all: ^4.1.5
+      rimraf: ^3.0.2
+      ts-node: ^10.9.1
+      typescript: ^4.9.4
+    devDependencies:
+      '@microsoft/api-extractor': 7.33.8
+      '@ton.js/json-parser': link:../json-parser
+      '@types/node': 14.18.36
+      esbuild: 0.16.17
+      npm-run-all: 4.1.5
+      rimraf: 3.0.2
+      ts-node: 10.9.1_ocil65wecyuhsmrrocoajouipe
+      typescript: 4.9.4
+
+  packages/json-parser:
+    specifiers:
+      '@microsoft/api-extractor': ^7.33.8
       '@tsconfig/node-lts-strictest-esm': ^18.12.1
       '@types/chai': ^4.3.4
       '@types/mocha': ^10.0.1
@@ -74,10 +114,8 @@ importers:
       rimraf: ^3.0.2
       ts-node: ^10.9.1
       typescript: ^4.9.4
-    dependencies:
-      '@ton.js/json-parser': link:../json-parser
     devDependencies:
-      '@microsoft/api-extractor': 7.33.7
+      '@microsoft/api-extractor': 7.33.8
       '@tsconfig/node-lts-strictest-esm': 18.12.1
       '@types/chai': 4.3.4
       '@types/mocha': 10.0.1
@@ -90,11 +128,9 @@ importers:
       ts-node: 10.9.1_ocil65wecyuhsmrrocoajouipe
       typescript: 4.9.4
 
-  packages/json-parser:
+  packages/json-parser-rules:
     specifiers:
-      '@istanbuljs/nyc-config-typescript': ^1.0.2
-      '@microsoft/api-extractor': ^7.33.7
-      '@tsconfig/node-lts-strictest-esm': ^18.12.1
+      '@microsoft/api-extractor': ^7.33.8
       '@types/chai': ^4.3.4
       '@types/mocha': ^10.0.1
       '@types/node': ^14.18.36
@@ -106,9 +142,7 @@ importers:
       ts-node: ^10.9.1
       typescript: ^4.9.4
     devDependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.2
-      '@microsoft/api-extractor': 7.33.7
-      '@tsconfig/node-lts-strictest-esm': 18.12.1
+      '@microsoft/api-extractor': 7.33.8
       '@types/chai': 4.3.4
       '@types/mocha': 10.0.1
       '@types/node': 14.18.36
@@ -406,20 +440,6 @@ packages:
     dev: true
     optional: true
 
-  /@istanbuljs/nyc-config-typescript/1.0.2:
-    resolution: {integrity: sha512-iKGIyMoyJuFnJRSVTZ78POIRvNnwZaWIf8vG4ZS3rQq58MMDrqEX2nnzx0R28V2X8JvmKYiqY9FP2hlJsm8A0w==}
-    engines: {node: '>=8'}
-    peerDependencies:
-      nyc: '>=15'
-    dependencies:
-      '@istanbuljs/schema': 0.1.3
-    dev: true
-
-  /@istanbuljs/schema/0.1.3:
-    resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
-    engines: {node: '>=8'}
-    dev: true
-
   /@jridgewell/gen-mapping/0.3.2:
     resolution: {integrity: sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==}
     engines: {node: '>=6.0.0'}
@@ -470,8 +490,8 @@ packages:
       '@rushstack/node-core-library': 3.53.3
     dev: true
 
-  /@microsoft/api-extractor/7.33.7:
-    resolution: {integrity: sha512-fQT2v/j/55DhvMFiopLtth66E7xTFNhnumMKgKY14SaG6qU/V1W0e4nOAgbA+SmLakQjAd1Evu06ofaVaxBPbA==}
+  /@microsoft/api-extractor/7.33.8:
+    resolution: {integrity: sha512-lNscBtYcNwJ4t9kKt6AdYA+FGDG6S8a2EhHdggxgn+rkcTzQ9P6ZsDBSjXa+r+E8qdZjOLP5J1rxohH7t+FTJg==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor-model': 7.25.3
@@ -482,7 +502,7 @@ packages:
       '@rushstack/ts-command-line': 4.13.1
       colors: 1.2.5
       lodash: 4.17.21
-      resolve: 1.17.0
+      resolve: 1.22.1
       semver: 7.3.8
       source-map: 0.6.1
       typescript: 4.8.4
@@ -520,7 +540,7 @@ packages:
     dependencies:
       '@npmcli/name-from-folder': 2.0.0
       glob: 8.1.0
-      minimatch: 5.1.4
+      minimatch: 5.1.6
       read-package-json-fast: 3.0.2
     dev: false
 
@@ -823,7 +843,7 @@ packages:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
       function-bind: 1.1.1
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
     dev: true
 
   /camel-case/4.1.2:
@@ -1165,7 +1185,7 @@ packages:
       es-to-primitive: 1.2.1
       function-bind: 1.1.1
       function.prototype.name: 1.1.5
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       get-symbol-description: 1.0.0
       globalthis: 1.0.3
       gopd: 1.0.1
@@ -1198,7 +1218,7 @@ packages:
     resolution: {integrity: sha512-g3OMbtlwY3QewlqAiMLI47KywjWZoEytKr8pf6iTC8uJq5bIAH52Z9pnQ8pVL6whrCto53JZDuUIsifGeLorTg==}
     engines: {node: '>= 0.4'}
     dependencies:
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       has: 1.0.3
       has-tostringtag: 1.0.0
     dev: true
@@ -1361,8 +1381,8 @@ packages:
     resolution: {integrity: sha512-Hm0ixYtaSZ/V7C8FJrtZIuBBI+iSgL+1Aq82zSu8VQNB4S3Gk8e7Qs3VwBDJAhmRZcFqkl3tQu36g/Foh5I5ig==}
     dev: true
 
-  /get-intrinsic/1.1.3:
-    resolution: {integrity: sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==}
+  /get-intrinsic/1.2.0:
+    resolution: {integrity: sha512-L049y6nFOuom5wGyRc3/gdTLO94dySVKRACj1RmJZBQXlbTMhtNIgkWkUHq+jYmZvKf14EW1EoJnnjbmoHij0Q==}
     dependencies:
       function-bind: 1.1.1
       has: 1.0.3
@@ -1374,7 +1394,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
     dev: true
 
   /github-slugger/1.5.0:
@@ -1417,7 +1437,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.1.4
+      minimatch: 5.1.6
       once: 1.4.0
     dev: false
 
@@ -1431,7 +1451,7 @@ packages:
   /gopd/1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
     dev: true
 
   /graceful-fs/4.2.10:
@@ -1454,7 +1474,7 @@ packages:
   /has-property-descriptors/1.0.0:
     resolution: {integrity: sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==}
     dependencies:
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
     dev: true
 
   /has-proto/1.0.1:
@@ -1552,7 +1572,7 @@ packages:
     resolution: {integrity: sha512-tA8URYccNzMo94s5MQZgH8NB/XTa6HsOo0MLfXTKKEnHVVdegzaQoFZ7Jp44bdvLvY2waT5dc+j5ICEswhi7UQ==}
     engines: {node: '>= 0.4'}
     dependencies:
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       has: 1.0.3
       side-channel: 1.0.4
     dev: true
@@ -1561,7 +1581,7 @@ packages:
     resolution: {integrity: sha512-ASfLknmY8Xa2XtB4wmbz13Wu202baeA18cJBCeCy0wXUHZF0IPyVEXqKEcd+t2fNSLLL1vC6k7lxZEojNbISXQ==}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       is-typed-array: 1.1.10
     dev: true
 
@@ -2129,8 +2149,8 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
-  /minimatch/5.1.4:
-    resolution: {integrity: sha512-U0iNYXt9wALljzfnGkhFSy5sAC6/SCR3JrHrlsdJz4kF8MvhTRQNiC59iUi1iqsitV7abrNAJWElVL9pdnoUgw==}
+  /minimatch/5.1.6:
+    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -2408,8 +2428,8 @@ packages:
       levenshtein-edit-distance: 1.0.0
     dev: false
 
-  /punycode/2.2.0:
-    resolution: {integrity: sha512-LN6QV1IJ9ZhxWTNdktaPClrNfp8xdSAYS0Zk2ddX7XsXZAxckMHPCBcHRo0cTcEIgYPRiGEkmji3Idkh2yFtYw==}
+  /punycode/2.3.0:
+    resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
     dev: true
 
@@ -2577,7 +2597,7 @@ packages:
     resolution: {integrity: sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       is-regex: 1.1.4
     dev: true
 
@@ -2619,7 +2639,7 @@ packages:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.3
+      get-intrinsic: 1.2.0
       object-inspect: 1.12.3
     dev: true
 
@@ -3019,7 +3039,7 @@ packages:
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
-      punycode: 2.2.0
+      punycode: 2.3.0
     dev: true
 
   /util-deprecate/1.0.2:

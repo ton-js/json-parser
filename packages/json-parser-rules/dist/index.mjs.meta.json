@@ -1,0 +1,44 @@
+{
+    "inputs": {
+        "src/json-parser-rules.ts": {
+            "bytes": 2655,
+            "imports": [],
+            "format": "esm"
+        },
+        "src/index.ts": {
+            "bytes": 232,
+            "imports": [
+                {
+                    "path": "src/json-parser-rules.ts",
+                    "kind": "import-statement",
+                    "original": "./json-parser-rules.js"
+                }
+            ],
+            "format": "esm"
+        }
+    },
+    "outputs": {
+        "dist/index.mjs.map": {
+            "imports": [],
+            "exports": [],
+            "inputs": {},
+            "bytes": 4237
+        },
+        "dist/index.mjs": {
+            "imports": [],
+            "exports": [
+                "parseJsonByRules"
+            ],
+            "entryPoint": "src/index.ts",
+            "inputs": {
+                "src/json-parser-rules.ts": {
+                    "bytesInOutput": 1668
+                },
+                "src/index.ts": {
+                    "bytesInOutput": 0
+                }
+            },
+            "bytes": 1762
+        }
+    }
+}
