@@ -3,6 +3,7 @@
   "scripts": {
   },
   "private": true,
+  "license": "MIT",
   "devDependencies": {
     "@tsconfig/node-lts-strictest-esm": "^18.12.1"
   }
