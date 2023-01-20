@@ -2,7 +2,7 @@
 
 <hr>
 
-# @ton.js/json-parser
+# 💎 @ton.js/json-parser
 
 A customizable JSON parser that is 100% compatible
 with native implementation (`JSON.parse()`),
