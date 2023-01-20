@@ -568,7 +568,7 @@ TON development in general — feel free to join our official
 
 ## The MIT License (MIT)
 
-Copyright © 2023 TON FOUNDATION
+Copyright © 2023 💎 TON FOUNDATION
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

@@ -34,7 +34,7 @@ let source = nunjucks.render(templatePath, {
   packageName: manifest.name,
   copyright: {
     years: renderYears(2023),
-    entity: 'TON FOUNDATION',
+    entity: '💎 TON FOUNDATION',
   },
   benchmarks,
 });
