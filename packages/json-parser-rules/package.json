@@ -1,6 +1,6 @@
 {
   "name": "@ton.js/json-parser-rules",
-  "version": "0.0.0-beta.1",
+  "version": "0.0.0-beta.0",
   "description": "Parse JSON by rules",
   "type": "module",
   "main": "./dist/index.mjs",
