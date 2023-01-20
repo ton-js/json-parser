@@ -2,6 +2,7 @@
   "name": "@ton.js/json-parser-rules",
   "version": "0.0.0-beta.0",
   "description": "Parse JSON by rules",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -34,7 +35,6 @@
     "email": "slava@fomin.io",
     "url": "https://github.com/slavafomin"
   },
-  "license": "MIT",
   "engines": {
     "node": ">=14"
   },

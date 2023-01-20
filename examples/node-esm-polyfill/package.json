@@ -2,6 +2,8 @@
   "name": "examples-node-esm",
   "version": "0.0.0",
   "description": "Node.js ESM examples",
+  "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "run-s clean build:compile",

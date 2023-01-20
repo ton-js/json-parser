@@ -1,7 +1,8 @@
 {
   "name": "benchmark",
-  "type": "module",
   "private": true,
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "if ! [ -d ./results ]; then run-s benchmark; fi",
     "benchmark": "ts-node ./benchmark.ts"

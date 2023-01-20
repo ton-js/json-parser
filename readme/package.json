@@ -2,6 +2,7 @@
   "name": "readme",
   "type": "module",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "ts-node ./build.ts"
   },

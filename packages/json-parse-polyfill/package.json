@@ -2,6 +2,7 @@
   "name": "@ton.js/json-parse-polyfill",
   "version": "0.0.0-beta.1",
   "description": "A polyfill for JSON.parse",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -36,7 +37,6 @@
     "email": "slava@fomin.io",
     "url": "https://github.com/slavafomin"
   },
-  "license": "MIT",
   "engines": {
     "node": ">=14"
   },

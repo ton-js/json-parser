@@ -2,6 +2,8 @@
   "name": "examples-node-esm-rules",
   "version": "0.0.0",
   "description": "Node.js ESM parsing by rules examples",
+  "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "run-s clean build:compile",
